@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sunglass</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-container">
+            <div class="header-left">
+                <p>Shop up to $300 and get <b>Coupon Code</b></p>
+            </div>
+
+            <div class="header-right">
+                <div class="header-right-header">
+                    <div><span class="fa fa-phone"></span>: +(1200) 987 118 765</div>
+
+                    <div><span class="fa fa-bell"></span>: 08:30 – 17:30, mon – sat</div>
+                </div>
+
+                <div class="header-right-footer">
+                    <a href="login.html">Login</a>&nbsp;&nbsp;&nbsp;
+                    <a href="sign.html">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu" id="menu">
+        <div class="menu-container">
+            <div class="logo">Sung<span>Glass</span></div>
+
+            <div class="menu-block">
+                <a href="index.html" class="menu-active">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="#">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#" class="page-block">
+                    <div class="page-header" onclick="show_details_2('page-content')">Pages</div>
+
+                    <div class="page-content" id="page-content">
+                        <a href="404.html">404</a>
+                        <a href="cart.html">Cart</a>
+                        <a href="checkout.html">checkout</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="login.html">login</a>
+                        <a href="order-history.html">Order History</a>
+                        <a href="payment.html">Payment</a>
+                        <a href="search result.html">Search</a>
+                        <a href="shop.html">Shop</a>
+                        <a href="single-product.html">Single Product</a>
+                        <a href="thank you.html">Thank You</a>
+                        <a href="track-order.html">Track Order</a>
+                        <a href="wishlist.html">Wishlist</a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="menu-block-2">
+                <a href="#" onclick="showSearchMenu()"><span class="fa fa-search"></span></a>
+                <a href="cart.html"><span class="fa fa-shopping-cart"></span> <sup><?php echo count($_SESSION["cart_session_arr"]) ?></sup></a>
+                <a href="wishlist.html"><span class="fa fa-heart-o"></span> <sup><?php echo count($_SESSION["wish_session_arr"]) ?></sup></a>
+                <div class="menu_icon" onclick="show_menu()">
+                    <span class="fa fa-bars"></span>
+                </div>
+            </div>
+
+            <form action="#" method="post" class="search-box" id="search-box">
+                <input type="text" name="" placeholder="Enter any word" id="" class="search-text">
+            </form>
+        </div>
+
+        <div class="menu-container-2" id="menu-2">
+            <a href="index.html" class="menu-active">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="#">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1 class="hero-text-header">
+                    Designer Summer <br>
+                    Collection
+                </h1>
+
+                <div class="hero-text-small">
+                    Shen an unknown printer took a galley of type and scrambled make <br>
+                    type specimen book. It has survived not only five centuries
+                </div>
+
+                <div class="btn-block">
+                    <a href="#" class="main-btn">Add Cart</a>
+                    <a href="#" class="ghost-btn">Wishlist</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="show">
+        <div class="show-container">
+            <div class="show-block">
+                <div class="show-text">Square Shape</div>
+                <img src="img/2.png" width="100%" height="100%" alt="" class="show-img">
+            </div>
+
+            <div class="show-block">
+                <div class="show-text">Round Shape</div>
+                <img src="img/3.png" width="100%" height="100%" alt="" class="show-img">
+            </div>
+
+            <div class="show-block">
+                <div class="show-text">Cats Shape</div>
+                <img src="img/4.png" width="100%" height="100%" alt="" class="show-img">
+            </div>
+        </div>
+    </div>
+
+    <div class="product">
+        <div class="product-container">
+            <div class="product-header">
+                <div>Featured</div> / <div>New</div>
+            </div>
+
+            <div class="product-content">
+                <div class="product-block" id="Featured">
+                    <div class="product-block-header">
+                        <div class="product-img">
+                            <img src="img/16.jpg" width="100%" height="100%" alt="">
+                        </div>
+
+                        <h2 style="margin-bottom: unset;padding-bottom: unset">New Product</h2>
+
+                        <div class="product-price">$90</div>
+                    </div>
+
+                    <div class="product-btn-block">
+                        <a href="single-product.html" class="cart-btn">Add Cart</a>
+
+                        <a href="" class="search-btn">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+
+                    <div class="off-text">12% OFF</div>
+
+                    <a href="" class="wish-btn">
+                        <span class="fa fa-heart-o"></span>
+                    </a>
+                </div>
+
+                <div class="product-block" id="Featured">
+                    <div class="product-block-header">
+                        <div class="product-img">
+                            <img src="img/16.jpg" width="100%" height="100%" alt="">
+                        </div>
+
+                        <h2 style="margin-bottom: unset;padding-bottom: unset">New Product</h2>
+
+                        <div class="product-price">$90</div>
+                    </div>
+
+                    <div class="product-btn-block">
+                        <a href="single-product.html" class="cart-btn">Add Cart</a>
+
+                        <a href="" class="search-btn">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+
+                    <div class="off-text">12% OFF</div>
+
+                    <a href="" class="wish-btn">
+                        <span class="fa fa-heart-o"></span>
+                    </a>
+                </div>
+
+                <div class="product-block" id="Featured">
+                    <div class="product-block-header">
+                        <div class="product-img">
+                            <img src="img/16.jpg" width="100%" height="100%" alt="">
+                        </div>
+
+                        <h2 style="margin-bottom: unset;padding-bottom: unset">New Product</h2>
+
+                        <div class="product-price">$90</div>
+                    </div>
+
+                    <div class="product-btn-block">
+                        <a href="single-product.html" class="cart-btn">Add Cart</a>
+
+                        <a href="" class="search-btn">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+
+                    <div class="off-text">12% OFF</div>
+
+                    <a href="" class="wish-btn">
+                        <span class="fa fa-heart-o"></span>
+                    </a>
+                </div>
+
+                <div class="product-block" id="Featured">
+                    <div class="product-block-header">
+                        <div class="product-img">
+                            <img src="img/16.jpg" width="100%" height="100%" alt="">
+                        </div>
+
+                        <h2 style="margin-bottom: unset;padding-bottom: unset">New Product</h2>
+
+                        <div class="product-price">$90</div>
+                    </div>
+
+                    <div class="product-btn-block">
+                        <a href="single-product.html" class="cart-btn">Add Cart</a>
+
+                        <a href="" class="search-btn">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+
+                    <div class="off-text">12% OFF</div>
+
+                    <a href="" class="wish-btn">
+                        <span class="fa fa-heart-o"></span>
+                    </a>
+                </div>
+
+                <div class="product-block" id="Featured">
+                    <div class="product-block-header">
+                        <div class="product-img">
+                            <img src="img/16.jpg" width="100%" height="100%" alt="">
+                        </div>
+
+                        <h2 style="margin-bottom: unset;padding-bottom: unset">New Product</h2>
+
+                        <div class="product-price">$90</div>
+                    </div>
+
+                    <div class="product-btn-block">
+                        <a href="single-product.html" class="cart-btn">Add Cart</a>
+
+                        <a href="" class="search-btn">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+
+                    <div class="off-text">12% OFF</div>
+
+                    <a href="" class="wish-btn">
+                        <span class="fa fa-heart-o"></span>
+                    </a>
+                </div>
+
+                <div class="product-block" id="Featured">
+                    <div class="product-block-header">
+                        <div class="product-img">
+                            <img src="img/16.jpg" width="100%" height="100%" alt="">
+                        </div>
+
+                        <h2 style="margin-bottom: unset;padding-bottom: unset">New Product</h2>
+
+                        <div class="product-price">$90</div>
+                    </div>
+
+                    <div class="product-btn-block">
+                        <a href="single-product.html" class="cart-btn">Add Cart</a>
+
+                        <a href="" class="search-btn">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+
+                    <div class="off-text">12% OFF</div>
+
+                    <a href="" class="wish-btn">
+                        <span class="fa fa-heart-o"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="load-btn">Load More</div>
+    </div>
+
+    <div class="trend">
+        <div class="trend-container">
+            <div class="trend-block">
+                <div class="trend-text-header">
+                    <div class="trend-text-header-small">Collection 2021</div>
+                    <div class="trend-text-header-big">Now Trending</div>
+                </div>
+
+                <div class="trend-img">
+                    <img src="img/6.png" width="100%" height="100%" alt="">
+                </div>
+
+                <div class="trend-text-details">Acetate Frame Sunglasses</div>
+
+                <div class="trend-price">$80</div>
+            </div>
+        </div>
+
+
+        <div class="trend-right-img">
+            <img src="img/7.jpg" width="100%" height="100%" alt="">
+        </div>
+    </div>
+
+    <div class="on-sell">
+        <div class="on-sell-container">
+            <div class="on-sell-header">On Selling Products</div>
+
+            <div class="on-sell-content">
+                <div class="on-sell-block">
+                    <div class="on-sell-block-img">
+                        <img src="img/8.jpg" width="100%" height="100%" alt="">
+                    </div>
+                </div>
+
+                <div class="on-sell-block">
+                    <a href="single-product.html"
+                        class="on-sell-block-content">
+                        <div class="on-sell-block-content-left">
+                            <img src="img/16.jpg" width="100%" height="100%"
+                                alt="">
+                        </div>
+
+                        <div class="on-sell-block-content-right">
+                            <b>New Product</b>
+
+                            <span class="on-sell-price">$90</span>
+                        </div>
+                    </a>
+
+                    <a href="single-product.html"
+                        class="on-sell-block-content">
+                        <div class="on-sell-block-content-left">
+                            <img src="img/16.jpg" width="100%" height="100%"
+                                alt="">
+                        </div>
+
+                        <div class="on-sell-block-content-right">
+                            <b>New Product</b>
+
+                            <span class="on-sell-price">$90</span>
+                        </div>
+                    </a>
+
+                    <a href="single-product.html"
+                        class="on-sell-block-content">
+                        <div class="on-sell-block-content-left">
+                            <img src="img/16.jpg" width="100%" height="100%"
+                                alt="">
+                        </div>
+
+                        <div class="on-sell-block-content-right">
+                            <b>New Product</b>
+
+                            <span class="on-sell-price">$90</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="on-sell-block">
+                    <a href="single-product.html"
+                        class="on-sell-block-content">
+                        <div class="on-sell-block-content-left">
+                            <img src="img/16.jpg" width="100%" height="100%"
+                                alt="">
+                        </div>
+
+                        <div class="on-sell-block-content-right">
+                            <b>New Product</b>
+
+                            <span class="on-sell-price">$90</span>
+                        </div>
+                    </a>
+
+                    <a href="single-product.html"
+                        class="on-sell-block-content">
+                        <div class="on-sell-block-content-left">
+                            <img src="img/16.jpg" width="100%" height="100%"
+                                alt="">
+                        </div>
+
+                        <div class="on-sell-block-content-right">
+                            <b>New Product</b>
+
+                            <span class="on-sell-price">$90</span>
+                        </div>
+                    </a>
+
+                    <a href="single-product.html"
+                        class="on-sell-block-content">
+                        <div class="on-sell-block-content-left">
+                            <img src="img/16.jpg" width="100%" height="100%"
+                                alt="">
+                        </div>
+
+                        <div class="on-sell-block-content-right">
+                            <b>New Product</b>
+
+                            <span class="on-sell-price">$90</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="support">
+        <div class="support-container">
+            <div class="support-block">
+                <div class="support-left">
+                    <div class="icon">
+                        <img src="img/i1.png" width="100%" height="100%" alt="">
+                    </div>
+                </div>
+
+                <div class="support-right">
+                    <div class="support-right-header">Free Shipping</div>
+                    <div class="support-right-footer">On All Orders</div>
+                </div>
+            </div>
+
+            <div class="support-block">
+                <div class="support-left">
+                    <div class="icon">
+                        <img src="img/i2.png" width="100%" height="100%" alt="">
+                    </div>
+                </div>
+
+                <div class="support-right">
+                    <div class="support-right-header">100% Money Back</div>
+                    <div class="support-right-footer">Within 30 Days Guaranted</div>
+                </div>
+            </div>
+
+            <div class="support-block">
+                <div class="support-left">
+                    <div class="icon">
+                        <img src="img/i3.png" width="100%" height="100%" alt="">
+                    </div>
+                </div>
+
+                <div class="support-right">
+                    <div class="support-right-header">Secure Payment</div>
+                    <div class="support-right-footer">100% secure payment</div>
+                </div>
+            </div>
+
+            <div class="support-block">
+                <div class="support-left">
+                    <div class="icon">
+                        <img src="img/i4.png" width="100%" height="100%" alt="">
+                    </div>
+                </div>
+
+                <div class="support-right">
+                    <div class="support-right-header">24/7 Live Support</div>
+                    <div class="support-right-footer">Get Help When You Need</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="summer">
+        <div class="summer-container">
+            <div class="summer-left">
+                <h1>New Summer</h1>
+                <span>Collection</span>
+                <a href="#" class="main-btn-2">Shop Now ></a>
+            </div>
+
+            <div class="summer-right">
+                <h1>Winter</h1>
+                <span>Collection</span>
+                <a href="#" class="main-btn-2">Shop Now ></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="shop">
+        <div class="shop-container">
+            <div class="shop-header">Why Shop From Us</div>
+
+            <div class="shop-content">
+                <div class="shop-block">
+                    <div class="icon">
+                        <img src="img/i1.png" width="100%" height="100%" alt="">
+                    </div>
+
+                    <div class="shop-text">
+                        <div class="shop-text-header">FREE SHIPPING</div>
+
+                        <div class="shop-text-content">
+                            Lorem Ipsum hasbeen standard daand scrambled. Rimply dummy text of the printing and
+                            typesetting industry
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop-block">
+                    <div class="icon">
+                        <img src="img/i4.png" width="100%" height="100%" alt="">
+                    </div>
+
+                    <div class="shop-text">
+                        <div class="shop-text-header">24/7 SUPPORT</div>
+
+                        <div class="shop-text-content">
+                            Lorem Ipsum hasbeen standard daand scrambled. Rimply dummy text of the printing and
+                            typesetting industry
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop-block">
+                    <div class="icon">
+                        <img src="img/i2.png" width="100%" height="100%" alt="">
+                    </div>
+
+                    <div class="shop-text">
+                        <div class="shop-text-header">EASY RETURN</div>
+
+                        <div class="shop-text-content">
+                            Lorem Ipsum hasbeen standard daand scrambled. Rimply dummy text of the printing and
+                            typesetting industry
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="newsletter">
+        <div class="newsletter-container">
+            <div class="newsletter-text">
+                <div class="newsletter-text-header">We Deliver Quality Products</div>
+                <div class="newsletter-text-footer">Stay connect for latest update</div>
+            </div>
+
+            <form action="#" class="newsletter-content">
+                <input type="text" name="" placeholder="Email Address" id="" class="newsletter-text-field">
+                <a href="#" class="newsletter-btn"><span class="fa fa-envelope-o"></span></a>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="fotoer-block">
+                <div class="footer-header">
+                    <div class="logo">Sung<span>Glass</span></div>
+                </div>
+
+                <div class="footer-content">
+                    <a href="#">
+                        <span class="fa fa-map-marker"></span>
+                        <span>59 Street, Newyork City, Rose Town, 05 Rive House</span>
+                    </a>
+
+                    <a href="#">
+                        <span class="fa fa-phone"></span>
+                        <span>+123 456 7890</span>
+                    </a>
+
+                    <a href="#">
+                        <span class="fa fa-envelope-o"></span>
+                        <span>info@example.com</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-block">
+                <div class="footer-header">Information</div>
+
+                <div class="footer-content">
+                    <a href="#">About Us</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">Selling Tips</a>
+                </div>
+            </div>
+
+            <div class="footer-block">
+                <div class="footer-header">My Account</div>
+
+                <div class="footer-content">
+                    <a href="#">Login / Register</a>
+                    <a href="#">My Cart</a>
+                    <a href="#">Whishlist</a>
+                    <a href="#">Order History</a>
+                    <a href="#">Track Order</a>
+                </div>
+            </div>
+
+            <div class="footer-block">
+                <div class="footer-header">Help & Support</div>
+
+                <div class="footer-content">
+                    <a href="#">How To Shop</a>
+                    <a href="#">Payment</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Delivery</a>
+                    <a href="#">Privacy & Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="footer-last">
+        <div class="footer-last-container">
+            <div class="footer-last-header">
+                <div class="footer-last-header-left">© Copyright Sunglass 2021. Designed and Developed</div>
+
+                <div class="footer-last-header-right">
+                    <div class="pay-img">
+                        <img src="img/11.png" width="100%" height="100%" alt="">
+                    </div>
+
+                    <div class="pay-img">
+                        <img src="img/12.png" width="100%" height="100%" alt="">
+                    </div>
+
+                    <div class="pay-img">
+                        <img src="img/13.png" width="100%" height="100%" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-last-footer">
+                <a href="#"><span class="fa fa-facebook"></span></a>
+                <a href="#"><span class="fa fa-twitter"></span></a>
+                <a href="#"><span class="fa fa-linkedin"></span></a>
+                <a href="#"><span class="fa fa-vimeo"></span></a>
+                <a href="#"><span class="fa fa-youtube"></span></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/filter.js"></script>
+
+    <script>
+        
+        function show_details_2(datas){
+           var x = document.getElementById(datas);
+
+           if (x.className === "page-content") {
+               x.className = "page-content-2";
+           }else{
+               x.className = "page-content";
+           }
+
+        }
+    </script>
+</body>
+
+</html>
